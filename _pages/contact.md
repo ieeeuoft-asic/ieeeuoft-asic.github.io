@@ -3,7 +3,6 @@ permalink: /contact/
 title: "Contact"
 ---
 
-# Get in touch
 Are you interested in learning more about the team? Have any questions? Here are some of the ways to reach out to us.
 
 ## Email
