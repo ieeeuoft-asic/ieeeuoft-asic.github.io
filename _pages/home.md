@@ -1,7 +1,7 @@
 ---
+layout: home
 permalink: /
 ---
-# IEEE UofT ASIC Team
 Welcome to the website of the IEEE University of Toronto ASIC Team. This website will host an introduction to the team, a series of technical blog reports on the work the team has accomplished, and relevant documentation pertaining to the team.
 
 <div class="notice--success">
@@ -13,6 +13,10 @@ Welcome to the website of the IEEE University of Toronto ASIC Team. This website
   </a>
   <a href="/contact/" class="btn btn--success">Contact Us</a>
 </div>
+
+---
+
+## Recent Posts
 
 ## ASICs?
 Application Specific Integrated Circuits (ASICs) are the cornerstone of modern electronics. These (mostly) tiny devices are foundational to our digital society. The process of fabricating Integrated Circuits (ICs) is known as taping out, or tapeout for [historical reasons](https://en.wikipedia.org/wiki/Tape-out#Naming).
