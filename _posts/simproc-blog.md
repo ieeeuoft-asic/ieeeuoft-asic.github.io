@@ -5,9 +5,14 @@ categories:
 tags:
   - tiny-tapeout
 ---
+ This week, the ASIC Team submitted **SimProc (Simple Processor)** as a part of the TinyTapeout TTSKY25b shuttle on 10 November 2025. TinyTapeout provides a multi-project waver (MPW) platform where each design occupies a small tile within the final ASIC. 
+ SimProc, along with an integrated UART-based communication interface, was built on a 2x2 tile (approximately 320×200µm), with an on-chip memory size of 64 bytes (reduced from the original 256 bytes due to size constraints).
 
+ The RTL code for SimProc was written in SystemVerilog and was also hardware validated on a DE10-Lite FPGA. The tapeout process itself was automated through the OpenLane (LibreLane) flow. Aside from configurations and tweaking parameters to make the design fit on a 2x2 tile, the entire process was managed by the toolchain making it very easy to go from RTL to ASIC.
 
-## SimProc (Simple Processor)
+ The shuttle is now in fabrication, and chips are expected to be completed by May 2026.
+
+## SimProc Design Overview
 
 **SimProc** is a compact 8-bit CPU designed entirely from scratch in SystemVerilog.  
 Its architecture was originally introduced in my **ECE243 (Computer Organization)** course, where our professor designed and explained the fundamentals of SimProc. Inspired by that, I implemented the full processor in SystemVerilog and adapted it for ASIC fabrication through TinyTapeout.  
@@ -16,8 +21,6 @@ The CPU features a minimalist instruction set of **11 atomic operations**, suppo
 
 To make the processor more interactive and extensible, I integrated a **UART interface** for serial communication — enabling programming, monitoring, and debugging directly over a terminal connection.  
 I’m also developing a **C library API** that provides a higher-level interface for communicating with the chip, making it easier to send instructions, read memory, and control execution from a host computer.
-
-## My Experience with the Toolchain
 
 
 
