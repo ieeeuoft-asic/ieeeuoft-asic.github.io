@@ -15,6 +15,66 @@ tags:
 
  The shuttle is now in fabrication, with chips expected to arrive in **May 2026**.
 
+## ASIC Technical Details
+
+After running the design through the OpenLane/LibreLane toolchain, the TinyTapeout GitHub workflow automatically executed synthesis, place-and-route, verification, and GDS generation. The resulting reports summarize resource usage, timing, and physical layout for the final SKY130 implementation of SimProc.
+
+
+### Technical Specifications :
+- **Recommended Clock Frequency:** 30 MHz  
+- **Standard Cell Count:** 9199 cells  
+- **Cell Area Usage:** 59.94% of 2×2 tile  
+- **Total Wire Length:** 158,110 µm
+- **Memory:** 64 bytes (implemented as flip-flops)  
+
+- **Standard Cell Breakdown:**
+
+  | Cell Type        | Count | Percentage |
+  |------------------|-------|------------|
+  | Combinational    | 1598     | 17.37% |
+  | Flip Flops       | 706      | 7.69%  |
+  | Buffers          | 443      | 4.81%  |
+  | Inverters        | 42       | 0.46%  |
+  | Fill             | 4068     | 44.22% |
+  | Tap              | 1037     | 11.27% |
+  | Misc             | 1305     | 14.18% |
+  | **Total**        | 9199     | 100%   |
+
+
+### I/O Signal Mapping (TinyTapeout Pinout)
+
+SimProc uses TinyTapeout’s standard 8-pin I/O structure:  
+- `ui[7:0]`: input
+- `uo[7:0]`: output
+- `uio[7:0]`: bidirectional (we use them as inputs)
+
+The mapping for our design is:
+
+| Pin # | Input          | Output     | Bidirectional     | 
+|-------|----------------|------------|--------------------
+| 0     | uart_rx        | uart_tx    | clk_per_bit[0]    |
+| 1     | -              | halt       | clk_per_bit[1]    |
+| 2     | -              | done       | clk_per_bit[2]    |
+| 3     | -              | -          | clk_per_bit[3]    |
+| 4     | -              | -          | clk_per_bit[4]    |
+| 5     | -              | -          | clk_per_bit[5]    |
+| 6     | -              | -          | clk_per_bit[6]    |
+| 7     | -              | -          | clk_per_bit[7]    |
+
+The UART baud rate can be configured using the 8-bit **clk_per_bit** input, given by the equation:
+
+**BAUD = f_clk / (4 × clk_per_bit)**
+
+### I/O Summary
+
+- **UART:**  
+  - RX on `ui[0]`  
+  - TX on `uo[0]`  
+  - Baud rate set using `uio[7:0]` (clk_per_bit)
+
+- **Status Flags:**  
+  - `halt` flag on `uo[1]`  
+  - `done` flag on `uo[2]`  
 
 ## SimProc Design Overview
 
