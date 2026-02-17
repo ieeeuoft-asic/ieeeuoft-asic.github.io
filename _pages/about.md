@@ -113,6 +113,6 @@ For more information about IEEE UofT and its various initiatives, visit [ieee.ut
 
 ## Contact Us
 
-- **Email**: [projects@ieee.utoronto.ca](mailto:projects@ieee.utoronto.ca)
+- **Email**: [asic@ieee.utoronto.ca](mailto:asic@ieee.utoronto.ca)
 - **GitHub**: [@ieeeuoft-asic](https://github.com/ieeeuoft-asic)
 - **Instagram**: [@ieee_uoft](https://instagram.com/ieee_uoft)
