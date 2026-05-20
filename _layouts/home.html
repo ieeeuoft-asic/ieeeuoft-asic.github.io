@@ -1,0 +1,124 @@
+---
+layout: default
+---
+<section class="asic-hero" data-reveal>
+  <div class="asic-hero__grid">
+    <div class="asic-hero__copy">
+      <p class="asic-hero__eyebrow">IEEE University of Toronto · SKY130</p>
+      <h1 class="asic-hero__title">Tapeouts.<br><span class="asic-hero__title-accent">By Undergrads.</span></h1>
+      <p class="asic-hero__lead">We design, verify, and fabricate real silicon — open-source tooling, TinyTapeout shuttles, and hands-on IC experience for ECE students.</p>
+      <div class="asic-hero__actions">
+        <a href="{{ '/about/' | relative_url }}" class="btn btn-pulse btn-primary">About Our Team</a>
+        <a href="{{ '/assets/asic_team_one_pager.pdf' | relative_url }}" class="btn btn-secondary" target="_blank" rel="noopener">
+          <i class="fas fa-download"></i> One-Pager
+        </a>
+      </div>
+    </div>
+    <div class="asic-hero__viz">
+      <canvas id="hero-chip" class="asic-hero__canvas" aria-hidden="true"></canvas>
+      <div class="asic-hero__viz-label">die floorplan · live trace</div>
+    </div>
+  </div>
+</section>
+
+<section class="asic-stats" aria-label="Team impact" data-reveal>
+  <div class="asic-stats__grid">
+    <div class="asic-stat">
+      <span class="asic-stat__value" data-counter="18">0</span>
+      <span class="asic-stat__label">Associates</span>
+    </div>
+    <div class="asic-stat">
+      <span class="asic-stat__value" data-counter="60" data-counter-suffix="+">0</span>
+      <span class="asic-stat__label">Students Reached</span>
+    </div>
+    <div class="asic-stat">
+      <span class="asic-stat__value" data-counter="100" data-counter-suffix="+">0</span>
+      <span class="asic-stat__label">Applications</span>
+    </div>
+    <div class="asic-stat">
+      <span class="asic-stat__value" data-counter="2">0</span>
+      <span class="asic-stat__label">Directors</span>
+    </div>
+  </div>
+</section>
+
+<section class="asic-section" data-reveal>
+  <header class="asic-section__header">
+    <h2>What We Do</h2>
+    <p>From weekly labs to multi-project wafer tapeouts.</p>
+  </header>
+  <div class="asic-cards asic-cards--3">
+    <article class="chip-card">
+      <div class="chip-card__icon"><i class="fas fa-graduation-cap"></i></div>
+      <h3>Learning</h3>
+      <p>Weekly sessions and hands-on labs with LibreLane, OpenLane, and the open-source IC toolchain.</p>
+    </article>
+    <article class="chip-card">
+      <div class="chip-card__icon"><i class="fas fa-microchip"></i></div>
+      <h3>Designing</h3>
+      <p>Each associate prototypes a design in our ASIC Kompetition; winners tape out on TinyTapeout shuttles.</p>
+    </article>
+    <article class="chip-card">
+      <div class="chip-card__icon"><i class="fas fa-users"></i></div>
+      <h3>Community</h3>
+      <p>Workshops, job mixers, and paper reviews — building IC designers at UofT.</p>
+    </article>
+  </div>
+</section>
+
+<section class="asic-section asic-stack" data-reveal>
+  <header class="asic-section__header">
+    <h2>Tech Stack</h2>
+    <p>Open silicon, open tools.</p>
+  </header>
+  <div class="asic-stack__chips">
+    <span class="asic-stack__chip">SKY130</span>
+    <span class="asic-stack__chip">LibreLane</span>
+    <span class="asic-stack__chip">OpenLane</span>
+    <span class="asic-stack__chip">TinyTapeout</span>
+    <span class="asic-stack__chip">FOSSi</span>
+    <span class="asic-stack__chip">SystemVerilog</span>
+  </div>
+</section>
+
+{% if content != blank %}
+<section class="asic-section asic-intro" data-reveal>
+  <div class="asic-prose asic-intro__body">
+    {{ content }}
+  </div>
+</section>
+{% endif %}
+
+<section class="asic-section" data-reveal>
+  <header class="asic-section__header">
+    <h2>Recent Posts</h2>
+    <p>Technical reports from the lab.</p>
+  </header>
+  <div class="asic-post-grid">
+    {% for post in site.posts limit:3 %}
+      <article class="chip-card asic-post-card">
+        <time class="asic-post-card__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %d, %Y' }}</time>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        {% if post.excerpt %}
+          <p>{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
+        {% endif %}
+        <a href="{{ post.url | relative_url }}" class="asic-post-card__link">Read report <i class="fas fa-arrow-right"></i></a>
+      </article>
+    {% endfor %}
+  </div>
+  <div class="asic-section__cta">
+    <a href="{{ '/posts/' | relative_url }}" class="btn btn-secondary">All Posts</a>
+  </div>
+</section>
+
+<section class="asic-cta-band" data-reveal>
+  <h2>Ready to build silicon?</h2>
+  <p>Join our team or reach out about workshops and collaborations.</p>
+  <div class="asic-cta-band__actions">
+    <a href="{{ '/contact/' | relative_url }}" class="btn btn-pulse btn-primary">Contact Us</a>
+    <a href="https://github.com/ieeeuoft-asic" class="btn btn-secondary" rel="noopener noreferrer">GitHub</a>
+  </div>
+</section>
+
+<script src="{{ '/assets/js/hero-chip.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/counters.js' | relative_url }}" defer></script>

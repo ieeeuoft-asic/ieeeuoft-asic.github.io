@@ -1,0 +1,28 @@
+<footer class="asic-footer">
+  <div class="asic-footer__grid">
+    <div class="asic-footer__brand">
+      <img src="{{ '/assets/images/asic-logo-transparent.png' | relative_url }}" alt="ASIC Toronto" height="52" class="asic-footer__logo">
+      <p class="asic-footer__tagline">IC design opportunities for undergraduates at the University of Toronto.</p>
+    </div>
+    <div class="asic-footer__col">
+      <h4>Navigate</h4>
+      <ul>
+        {% for link in site.data.navigation.main %}
+          <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="asic-footer__col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://github.com/ieeeuoft-asic" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://instagram.com/ieee_uoft" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="mailto:asic@ieee.utoronto.ca">asic@ieee.utoronto.ca</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="asic-footer__bottom">
+    <span>&copy; {{ 'now' | date: '%Y' }} {{ site.title }}</span>
+    <span class="asic-footer__powered">SKY130 · LibreLane · TinyTapeout</span>
+  </div>
+</footer>

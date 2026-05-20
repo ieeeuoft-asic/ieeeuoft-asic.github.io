@@ -1,0 +1,19 @@
+<div class="asic-masthead">
+  <div class="asic-masthead__inner">
+    <a class="asic-masthead__brand" href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/images/asic-logo-transparent.png' | relative_url }}" alt="ASIC Toronto — IEEE UofT" height="40" class="asic-masthead__logo">
+    </a>
+    <button class="asic-masthead__toggle" type="button" aria-expanded="false" aria-controls="asic-nav" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="asic-nav" class="asic-masthead__nav" aria-label="Primary">
+      <ul class="asic-masthead__links">
+        {% for link in site.data.navigation.main %}
+          <li>
+            <a href="{{ link.url | relative_url }}"{% if page.url == link.url %} class="is-active"{% endif %}>{{ link.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</div>

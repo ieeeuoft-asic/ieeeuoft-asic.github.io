@@ -27,16 +27,22 @@ Every associate on our team is passionate about creating their own integrated ci
 ### Building a Community
 The purpose of the ASIC team is to build a passionate community of IC designers at the University of Toronto. We run events like the IC job mixer, introducing students to the ASIC design flow and different career paths in this field. We also host workshops and paper reviews open to the broader student body, covering topics like asynchronous circuits and AI-assisted EDA.
 
+<div class="chip-card" markdown="1">
+
 ## Our Mission
 1. Creating practical IC Design Opportunities for Students
 2. Contributing back to the Open Source Silicon Community  
 3. Creating Resources for interested parties in IC design
+
+</div>
 
 ## About Our Team
 We have a team of 18 engineering undergrads joining as associates, with 2 directors leading the initiative. Our events have tremendous impact, with community events reaching 60+ students in attendance, and over 100 students applied to join the team. We are thrilled that the passion for ICs and electronics continues to grow stronger at UofT.
 
 ## Previous Projects
 This is now the second year of the ASIC team. The first year was a trial run to build the grassroots. The product of our first year was a DPLL project, which is slated to be taped out on the TT-Sky-25b shuttle.
+
+<div class="chip-card" markdown="1">
 
 ## Technical Stack
 Due to the limited availability and high cost of proprietary IC design software, the team has adopted an open source tech stack, utilizing resources and tools from the amazing FOSSi community:
@@ -45,6 +51,8 @@ Due to the limited availability and high cost of proprietary IC design software,
 - **Toolchain Flow**: LibreLane  
 - **Tooling**: Open Circuit Design
 - **Tapeout Provider**: TinyTapeout
+
+</div>
 
 ## Our Team Structure
 
@@ -94,12 +102,16 @@ The ASIC Team operates as a specialized project team under the IEEE UofT umbrell
 - **Workshop Opportunities**: Participation in broader IEEE UofT technical sessions
 - **Community Building**: Integration with the larger IEEE UofT community
 
+<div class="chip-card" markdown="1">
+
 ## Our Impact
 
 - **60+ students** reached through community events
 - **100+ applications** received for team membership
 - **Growing passion** for ICs and electronics at UofT
 - **Active participation** in the open source silicon community
+
+</div>
 
 ## Get Involved
 
