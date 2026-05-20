@@ -13,10 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: IEEE UofT - ASIC Team
-email: projects@ieee.utoronto.ca
+title: UofT ASIC Team
+email: team@uoftasic.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Website of the IEEE UofT ASIC Team. Learn more about our team and our work.
+  Website of the UofT ASIC Team. Practical IC design opportunities, open-source silicon, and resources for undergraduates at the University of Toronto.
 github_username: ieeeuoft-asic 
 minimal_mistakes_skin: dark
 search: true
@@ -53,7 +53,7 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "IEEE UofT ASIC Team"
+  name   : "UofT ASIC Team"
   avatar : "/assets/images/asic-logo-transparent.png"
   bio    : "IC Design Team at the University of Toronto focusing on providing tapeout opportunities to Undergraduates"
   links:
@@ -62,10 +62,10 @@ author:
       url: "https://github.com/ieeeuoft-asic"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/ieee_uoft"
+      url: "https://www.instagram.com/uoftasic"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:asic@ieee.utoronto.ca"
+      url: "mailto:team@uoftasic.com"
 
 footer:
   links:
@@ -74,10 +74,10 @@ footer:
       url: "https://github.com/ieeeuoft-asic"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/ieee_uoft"
+      url: "https://www.instagram.com/uoftasic"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:asic@ieee.utoronto.ca"
+      url: "mailto:team@uoftasic.com"
 
 defaults:
   # _posts

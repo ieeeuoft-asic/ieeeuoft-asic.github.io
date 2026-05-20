@@ -1,7 +1,7 @@
 ---
 ---
 
-/* IEEE UofT ASIC Team — Dark Silicon Lab Theme */
+/* UofT ASIC Team — Dark Silicon Lab Theme */
 
 :root {
   --bg: #050912;
@@ -9,7 +9,7 @@
   --surface-2: #121c30;
   --ieee: #0077b8;
   --accent: #00aeef;
-  --accent2: #ff3b4a;
+  --accent2: #8b9bb4;
   --text: #e6edf6;
   --muted: #8b9bb4;
   --border: rgba(0, 174, 239, 0.22);
@@ -254,7 +254,7 @@ body.asic-shell::before {
 }
 
 .asic-hero__title-accent {
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  background: linear-gradient(90deg, var(--ieee), var(--accent), var(--accent2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -315,7 +315,7 @@ body.asic-shell::before {
 
 .asic-stats__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   text-align: center;
 }
@@ -423,7 +423,44 @@ body.asic-shell::before {
   font-size: 0.92rem;
 }
 
-/* Tech stack chips */
+/* Mission highlights */
+.asic-mission__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.asic-mission__item {
+  padding: 1.25rem 1.35rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.asic-mission__item h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.asic-mission__item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.asic-footer__mission {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  text-align: right;
+  max-width: 42ch;
+}
+
+/* Tech stack chips (legacy) */
 .asic-stack__chips {
   display: flex;
   flex-wrap: wrap;
@@ -486,7 +523,7 @@ body.asic-shell::before {
   text-align: center;
   padding: 3rem 2rem;
   margin: 2rem 0 0;
-  background: linear-gradient(135deg, rgba(0, 119, 184, 0.25), rgba(255, 59, 74, 0.12));
+  background: linear-gradient(135deg, rgba(0, 119, 184, 0.28), rgba(139, 155, 180, 0.12));
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
@@ -499,6 +536,28 @@ body.asic-shell::before {
 .asic-cta-band p {
   color: var(--muted);
   margin: 0 0 1.5rem;
+}
+
+.asic-cta-band p a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.asic-cta-band p a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.asic-cta-band__actions .btn-primary {
+  color: #fff;
+}
+
+.asic-cta-band__actions .btn-primary:hover {
+  color: var(--accent);
+  background: var(--surface);
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(0, 174, 239, 0.25);
 }
 
 .asic-cta-band__actions {
@@ -568,7 +627,7 @@ body.asic-shell::before {
 
 .asic-pill--tag {
   color: var(--accent2);
-  border-color: rgba(255, 59, 74, 0.4);
+  border-color: rgba(139, 155, 180, 0.45);
 }
 
 .asic-prose {
@@ -653,7 +712,7 @@ body.asic-shell::before {
 }
 
 .asic-prose blockquote {
-  border-left: 3px solid var(--accent2);
+  border-left: 3px solid var(--ieee);
   margin: 1.5rem 0;
   padding: 0.5rem 0 0.5rem 1.25rem;
   color: var(--muted);
@@ -849,12 +908,13 @@ body.asic-shell::before {
   }
 
   .asic-cards--3,
-  .asic-post-grid {
+  .asic-post-grid,
+  .asic-mission__grid {
     grid-template-columns: 1fr;
   }
 
   .asic-stats__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .asic-footer__grid {
@@ -892,6 +952,16 @@ body.asic-shell::before {
 
   .asic-stats__grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .asic-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .asic-footer__mission {
+    text-align: left;
+    max-width: none;
   }
 }
 
