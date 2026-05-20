@@ -3,3 +3,7 @@ _site
 .jekyll-metadata
 Gemfile.lock
 .obsidian
+node_modules/
+tests/__screenshots__/
+playwright-report/
+test-results/

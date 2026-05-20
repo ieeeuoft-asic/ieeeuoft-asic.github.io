@@ -1,9 +1,9 @@
 main:
+  - title: "Home"
+    url: /
   - title: "About"
     url: /about/
-  - title: "One-Pager"
-    url: /assets/asic_team_one_pager.pdf
+  - title: "Blog Posts"
+    url: /posts/
   - title: "Contact"
     url: /contact/
-  - title: "Posts"
-    url: /posts/

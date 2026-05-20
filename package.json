@@ -1,0 +1,12 @@
+{
+  "name": "ieeeuoft-asic-site",
+  "private": true,
+  "scripts": {
+    "serve": "bundle exec jekyll serve --port 4000 --host 127.0.0.1",
+    "build": "bundle exec jekyll build",
+    "test:visual": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0"
+  }
+}
